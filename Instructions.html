@@ -1,0 +1,121 @@
+<!---Could be Home? Initial instructions for new users to understand the game and layout-->
+<!---Needs changing as still based around colab ui-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Hunt for Mr X</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7e7e7e;
+        }
+
+        header {
+            background-color: #333;
+            color: #6aff00;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            background-color: #333;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #888888;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>The Hunt for Mr X</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Instructions</a></li>
+            <li><a href="{{ url_for('clues') }}">Clues</a></li>
+            <li><a href="{{ url_for('hints') }}">Hints</a></li>
+        </ul>
+    </nav>
+    
+
+    <section>
+        <h2>About This Website</h2>
+        <p>The following is a hunt similar to that presented by a treasure map. <br>
+            Here, though, the hunt takes place entirely virtually, on your device, through the internet. <br><br>
+            (I made this on a laptop, so it should work pretty well if you're using the same, but I can't promise it'll 
+            be entirely seamless on phones/tablets etc.). In order to complete it, you'll have to use various online 
+            tools and sites. All of these are free to access, with one definite exception. Without giving too much away, 
+            this shouldn't be an issue in most cases. Nevertheless, answers to clues can always be revealed by clicking 
+            'show code' or the little triangle beside the clue headers, or by double clicking the headers themselves. 
+            Needless to say, don't do this if you haven't totally given up on a particular clue, it's entirely a measure 
+            of last resort. I should also say, Google Maps (and Street View by extension) is the bread and butter of this 
+            game - if you're stuck, these are a good place to start. So also, don't use Apple maps. It sucks.
+
+            Below is a more digestible list of pointers for the game's format:
+            
+                Clues consist of code cell headers with hidden code (easily exposed, as aforementioned, so be careful).
+                When you solve a clue, run the clue cell by clicking the 'play' icon below the clue's header number. A box will then pop up for you to input your answer.
+                Be careful not to interrupt a running cell by clicking the 'stop' icon that replaces 'play' when the cell is waiting for an input. This will display an error message which will reveal the answer (instead just input a wrong answer).
+                Answers are not case sensitive.
+                Clues are numbered, but only so that they can refer to each other easily, you can complete them in any order you like.
+                Be mindful of where you leave each clue, as trails carry on from after answers are inputted. For example, if 'Harry Potter' is an answer to a clue, expect 'Harry Potter' to be used later in the game, if not immediately continued from.
+                If you get an answer right, you'll be awarded a piece of information which will be vital to another point in the game - not necessarily the subsequent clue.
+                I recommend noting down your answers/awarded information, as re-running correctly answered cells will delete these.
+                Below each clue cell is another which, when run, will tell you which clues will have needed to be done prior to the one above. This is intended to work like a hint, so only run it if you need to, but hopefully it gives a hand while not spoiling any of the actual clue solving.
+                On the subject of hints, some clues will display one upon an incorrect answer being entered. If you're stil stuck after exhausting these, you'll have to associate with your fellow code-crackers or let me know that you need an extra hint.
+                Expect everything to be 'used' once (ie. information given in correct answers will likely only be used once) with the exception of the key presented prior to the clues.
+                Lastly, take the names given by Google Street View as belonging to those in the photo, even if this is pretty obviously not the case (it's just a bloody game).
+            
+            Feel free to zap me a message if you get stuck and don't want to give up on a clue just yet.
+            
+            Other than that, enjoy.</p>
+    </section>
+
+    <footer>
+        <p>by Fin McPartlin</p>
+    </footer>
+
+</body>
+
+</html>
